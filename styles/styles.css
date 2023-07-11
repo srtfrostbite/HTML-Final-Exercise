@@ -32,6 +32,9 @@ p {
 
 }
 
+section {
+    padding: 50px auto;
+}
 
 .hero-section {
     background-color: rgba(0, 0, 0, 0.2);
@@ -262,4 +265,76 @@ section.tour-management {
 
 .card-text {
     margin: 30px;
+}
+
+
+
+
+img.testimonial {
+    width: 50px;
+    border-radius: 25px;
+}
+
+
+
+
+
+
+
+
+.footer {
+    background-color: #1a1a1a;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 200;
+    line-height: 3rem;
+}
+
+.footer .container {
+    justify-content: space-around;
+}
+
+
+.footer-top {
+    margin: 100px 0;
+}
+
+.footer h3 {
+    line-height: 4rem;
+    color: white;
+}
+
+
+.contact-point {
+    font-style: italic;
+    color: white;
+}
+
+.footer-top i {
+    color: white;
+}
+
+.footer-top input[type=text]{
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: #1a1a1a;
+}
+
+
+
+.footer-bottom {
+    margin: 50px auto;
+    text-align: center;
+
+}
+
+.socials {
+    margin: 20px auto;
+    max-width: 600px;
+    justify-content: center;
+}
+
+
+.socials i {
+    padding: 0 10px;
 }
