@@ -1,3 +1,20 @@
+/* ************** Global Variables ************** */
+
+:root {
+    --primary-color: #65c0ba;
+    --gutter: 32px;
+    --container-margin: 50px auto;
+    --text-color: #6c757d;
+
+}
+
+
+
+
+
+/* ************** Body & General ************** */
+
+
 body {
     font-family: 'Mukta Mahee', sans-serif;
 }
@@ -33,8 +50,12 @@ p {
 }
 
 section {
-    padding: 50px auto;
+    padding: 100px auto;
 }
+
+
+/* ************** Hero Section ************** */
+
 
 .hero-section {
     background-color: rgba(0, 0, 0, 0.2);
@@ -106,7 +127,7 @@ section {
     font-size: 13px;
     font-weight: 100;
     text-align: center;
-    margin-top: 70px;
+    /* margin-top: 70px; */
     opacity: 0.9;
 }
 
@@ -114,9 +135,11 @@ section {
     font-size: 18px;
 }
 
+/* ************** Welcome Section ************** */
+
 .container {
     display: flex;
-    gap: 65px;
+    gap: var(--gutter);
     justify-content: center;
     max-width: 1100px;
     /* flex-wrap: wrap; */
@@ -124,6 +147,10 @@ section {
     margin: 0 auto;
 }
 
+.welcome .container {
+    /* margin: var(--container-margin); */
+    margin: 150px auto;
+}
 
 .welcome-photo img {
     width: 540px;
@@ -169,6 +196,10 @@ section {
     text-transform: uppercase;
 }
 
+
+/* ************** Experience Section ************** */
+
+
 .experience {
     background-color: #fafafa;
     padding: 50px 0;
@@ -197,7 +228,7 @@ section {
 }
 
 .benefit {
-    margin: 16px;
+    margin: calc(var(--gutter) / 2);
     text-align: center;
 }
 
@@ -217,9 +248,17 @@ section {
     font-weight: 200;
 }
 
+/* ************** Tour Management Section ************** */
+
+
 section.tour-management {
     padding-top: 100px;
     height: 150vh;
+    background-color: white;
+    background-image: url(/imgs/Tour-managemenet-bg-hi-res.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
 }
 
 .tour-management h2 {
@@ -245,9 +284,34 @@ section.tour-management {
     font-size: 40px;
 }
 
+/* ************** Blog Posts Section ************** */
 
 .blog-posts {
-    background-color: #65c0ba;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.blog-posts {
+    background-color: var(--primary-color);
+    --gutter:16px;
+}
+
+.blog.info {
+    padding: var(--container-margin);
+}
+
+.blog.info h2 {
+    font-size: 70px;
+    line-height: 8rem;
+}
+
+.blog.info p {
+    font-size: 20px;
+    line-height: 2.2rem;
+    color: white;
+    font-weight: 200;
+    opacity: 0.7;
+    margin-bottom: 50px;
 }
 
 .blog-posts .container {
@@ -255,8 +319,8 @@ section.tour-management {
 }
 
 .card {
-    width: 30%;
     background-color: white;
+
 }
 
 .card img {
@@ -267,18 +331,133 @@ section.tour-management {
     margin: 30px;
 }
 
+.card-text .date {
+    text-transform: uppercase;
+    color: var(--text-color);
+    opacity: 0.4;
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
 
+/* .card .card-text p.date {
+    text-transform: uppercase;
+} */
 
+.card .card-text h3 {
+    font-size: 26px;
+    margin-bottom: 15px
+}
 
-img.testimonial {
-    width: 50px;
-    border-radius: 25px;
+.card .card-text p.description {
+    font-size: 18px;
+    font-weight: 200;
+    color: var(--text-color);
+    opacity: 0.9;
+
 }
 
 
 
 
+/* ************** Customers Section ************** */
 
+.happy-customers {
+    background-color: #fafafa;
+    padding: 100px;
+    height: 50vh;
+}
+
+.happy-customers h2 {
+    font-size: 72px;
+    margin-bottom: 80px;
+}
+
+img.testimonial {
+    width: 70px;
+    border-radius: 35px;
+    margin-bottom: 10px;
+}
+
+p.testimonial {
+    font-style: italic;
+    font-size: 19px;
+    font-weight: 100px;
+    /* color: var(--text-color); */
+    margin-bottom: 10px;
+}
+
+p.name {
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 100px;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+
+/* ************** Destination Section ************** */
+
+.destinations {
+    padding: 100px;
+    height: 50vh;
+}
+
+.destination.info p {
+    color: var(--text-color);
+    font-size: 20px;
+    margin-bottom: 50px;
+    font-weight: 300;
+}
+
+.destination.card {
+    padding: 0;
+}
+
+.destination.card img{
+    width: 250px;
+    height: 170px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.destination.card .card-text {
+    margin: 0;
+    margin-top: 15px;
+}
+
+
+.destination.card .card-text h3 {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 10px;
+    line-height: 1rem;
+    justify-content: left;
+}
+
+.reviews {
+    /* margin: 0; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.rating {
+    color: #65c0ba;
+    font-size: 12px;
+}
+
+
+p.review-count {
+    color: var(--text-color);
+    opacity: 0.4;
+    font-style: italic;
+}
+
+
+
+/* ************** Footer Section ************** */
 
 
 
